@@ -1,0 +1,11 @@
+.grandparent {
+    border: 2px solid greenyellow;
+    display: flex;
+    justify-content: center;
+}
+
+    .parent {
+        border: 2px solid firebrick;
+        display: flex;
+        flex-direction: column;
+    }
