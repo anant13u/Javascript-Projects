@@ -1,12 +1,35 @@
 
 const googleButton = document.getElementById('google-button')
+const youtubeButton = document.getElementById('youtube-button')
+const redditButton = document.getElementById('reddit-button')
+const twitterButton = document.getElementById('twitter-button')
 
-// googleButton.addEventListener('click',openGoogle())
+googleButton.addEventListener('click',openGoogle)
+youtubeButton.addEventListener('click',openYoutube)
+redditButton.addEventListener('click',openReddit)
+twitterButton.addEventListener('click',openTwitter)
 
 function openGoogle() {
-    window.open('https://google.com')
+    const searchQuery = document.getElementById('search-box').innerHTML
+    window.open(`https://www.google.com/search?q=${searchQuery}`)
 }
 
 function openYoutube() {
-    window.open('https://youtube.com')
+    const searchQuery = document.getElementById('search-box').innerHTML
+    window.open(`https://www.youtube.com/results?search_query=${searchQuery}`)
 }
+
+function openReddit() {
+    const searchQuery = document.getElementById('search-box').innerHTML
+    window.open(`https://www.reddit.com/search/?q=${searchQuery}`)
+}
+
+function openTwitter() {
+    const searchQuery = document.getElementById('search-box').innerHTML
+    window.open(`https://twitter.com/search?q=${searchQuery}`)
+}
+
+
+// https://www.google.com/search?q=
+// https://www.reddit.com/search/?q=
+// https://twitter.com/search?q=
