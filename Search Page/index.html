@@ -10,12 +10,12 @@
 <body>
     <div class="grandparent">
         <div class="parent">
-            <h3 class="search-box" onclick="th contenteditable="True">Enter the search keyword here</h3>
+            <div class="search-box" id="search-box" contenteditable="True" onclick="document.getElementById('search-box').innerHTML=''">Enter the search keyword here</div>
             <div class="tabs-container">
-                <button>Search on Google</button>
-                <button>Search on YouTube</button>
-                <button>Search on Reddit</button>
-                <button>Search on Twitter</button>
+                <button id="google-button" onclick="openGoogle()">Search on Google</button>
+                <button id="youtube-button" onclick="openYoutube()">Search on YouTube</button>
+                <button id="reddit-button">Search on Reddit</button>
+                <button id="twitter-button">Search on Twitter</button>
             </div>
         </div>
     </div>
@@ -23,3 +23,5 @@
     <script src="script.js"></script>
 </body>
 </html>
+
+<!-- id="search-box" -->
