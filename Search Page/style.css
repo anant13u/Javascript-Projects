@@ -8,4 +8,13 @@
         border: 2px solid firebrick;
         display: flex;
         flex-direction: column;
+        justify-content: center;
+        gap: 30px;
+        align-items: center;
+        height: 40vh;
     }
+
+        .tabs-container {
+            display: flex;
+            gap: 30px;
+        }
