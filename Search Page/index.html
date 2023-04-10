@@ -6,16 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AU's Search Page</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
 </head>
 <body>
     <div class="grandparent">
         <div class="parent">
             <div class="search-box" id="search-box" contenteditable="True" onclick="document.getElementById('search-box').innerHTML=''">Enter the search keyword here</div>
             <div class="tabs-container">
-                <button id="google-button" onclick="openGoogle()">Search on Google</button>
-                <button id="youtube-button" onclick="openYoutube()">Search on YouTube</button>
-                <button id="reddit-button">Search on Reddit</button>
-                <button id="twitter-button">Search on Twitter</button>
+                <button id="google-button" class="search-button">Search on Google</button>
+                <button id="youtube-button" class="search-button">Search on YouTube</button>
+                <button id="reddit-button" class="search-button">Search on Reddit</button>
+                <button id="twitter-button" class="search-button">Search on Twitter<img src="Icons/Logo_of_Twitter,_Inc..svg.png" alt="" srcset="" width="20"></button>
             </div>
         </div>
     </div>
@@ -25,3 +27,9 @@
 </html>
 
 <!-- id="search-box" -->
+<!-- onclick="openGoogle()" -->
+<!-- onclick="openYoutube()" -->
+
+<!-- <i class="material-icons";>home</i>
+<span class="material-symbols-outlined";>youtube_activity</span>
+<i class="material-symbols-outlined" style="color: red;">add_to_drive</i> -->
