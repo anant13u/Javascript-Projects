@@ -8,13 +8,14 @@
         /* border: 2px solid firebrick; */
         display: flex;
         flex-direction: column;
-        justify-content: center;
-        gap: 50px;
+        justify-content: space-evenly;
+        gap: 30px;
         align-items: center;
-        height: 50vh;
+        /* height: 80vh; */
     }
 
         #main-header {
+            margin: 30px 0 0;
             font-size: 32px;
             font-family: 'Lato', serif;
             /* font-family: 'Arvo', serif; */
@@ -37,21 +38,48 @@
         }
 
         .tabs-container-parent {
-            width: 900px;
+            /* border: 2px solid firebrick; */
+            width: 700px;
             display: flex;
             justify-content: center;
             flex-direction: row;
             /* align-items: center; */
-            gap: 40px;
-            /* flex-wrap: wrap; */
+            gap: 10px;
+            flex-wrap: wrap;
         }
 
             .tabs-container-child {
+                /* border: 2px solid firebrick; */
+                border-radius: 10px;
+                padding: 25px;
+                width: 180px;
+                height: 160px;
                 display: flex;
                 flex-direction: column;
                 gap: 25px;
                 justify-content: center;
                 align-items: center;
+            }
+
+            .tabs-container-child:hover {
+                background-color: antiquewhite;
+                transition: 1s;
+            }
+
+            #google-container:hover {
+                background-color: #f7efdb;
+            }
+
+            #youtube-container:hover {
+                background-color: #ff00004d;
+            }
+
+            #reddit-container:hover {
+                background-color: #ff450029;
+            }
+
+            #twitter-container:hover {
+                background-color: #1989cf26;
             }
 
                 .upper-logo {
