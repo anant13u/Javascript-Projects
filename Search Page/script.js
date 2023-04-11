@@ -1,8 +1,8 @@
 
-const googleButton = document.getElementById('google-button')
-const youtubeButton = document.getElementById('youtube-button')
-const redditButton = document.getElementById('reddit-button')
-const twitterButton = document.getElementById('twitter-button')
+const googleButton = document.getElementById('google-container')
+const youtubeButton = document.getElementById('youtube-container')
+const redditButton = document.getElementById('reddit-container')
+const twitterButton = document.getElementById('twitter-container')
 
 googleButton.addEventListener('click',openGoogle)
 youtubeButton.addEventListener('click',openYoutube)
