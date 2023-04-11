@@ -1,11 +1,11 @@
 .grandparent {
-    border: 2px solid greenyellow;
+    /* border: 2px solid greenyellow; */
     display: flex;
     justify-content: center;
 }
 
     .parent {
-        border: 2px solid firebrick;
+        /* border: 2px solid firebrick; */
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -14,47 +14,92 @@
         height: 50vh;
     }
 
+        #main-header {
+            font-size: 32px;
+            font-family: 'Lato', serif;
+            /* font-family: 'Arvo', serif; */
+            /* font-family: 'Open Sans', sans-serif; */
+        }
+
         #search-box {
             border: 2px solid grey;
-            border-radius: 13px;
+            /* border-radius: 13px; */
             padding: 12px 18px;
-            min-width: 300px;
+            min-width: 500px;
             text-align: center;
             font-size: 18px;
+            font-family: 'Arvo', serif;
+            /* font-family: 'Alegreya', serif; */
         }
 
         #search-box:active {
             border: none;
         }
 
-        .tabs-container {
+        .tabs-container-parent {
             width: 900px;
             display: flex;
             justify-content: center;
+            flex-direction: row;
             /* align-items: center; */
             gap: 40px;
-            flex-wrap: wrap;
+            /* flex-wrap: wrap; */
         }
 
-            .search-button {
-                padding: 10px 15px;
-                font-size: 18px;
+            .tabs-container-child {
+                display: flex;
+                flex-direction: column;
+                gap: 25px;
+                justify-content: center;
+                align-items: center;
             }
 
-            #twitter-button {
-                border: 1px solid #36c;
-                border-radius: 30px;
-                background-color: white;
-                color: #36c;
-            }
+                .upper-logo {
+                    width: 60px;
+                }
 
-            img {
-                margin-top: 3px;
-                padding-left: 5px;
-            }
+
+                .search-button {
+                    border: none;
+                    border-radius: 30px;
+                    padding: 10px 15px;
+                    font-size: 18px;
+                }
+
+                #google-button {
+                    color: #ff4500;
+                    background-color: white;
+                }
+
+                #youtube-button {
+                    background-color: #FF0000;
+                    color: white;
+                }
+
+                #reddit-button {
+                    background-color: #ff4500;
+                    color: white;
+                }
+
+                #twitter-button {
+                    /* border: 1px solid #36c; */
+                    background-color: #1DA1F2;
+                    color: white;
+                }
+
+                img {
+                    margin-top: 3px;
+                    padding-left: 5px;
+                }
 
 
 
 
 /* Twitter icon downloaded from: */
 /* https://en.wikipedia.org/wiki/File:Twitter-logo.svg */
+
+/* YouTube icon downloaded from: */
+/* https://icons8.com/icons/set/youtube */
+
+/* Colors for Google logo taken from: */
+/* https://usbrandcolors.com/google-colors/ */
