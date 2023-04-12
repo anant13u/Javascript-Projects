@@ -16,7 +16,7 @@
 
         #main-header {
             margin: 60px 0 20px;
-            font-size: 40px;
+            font-size: 48px;
             font-family: 'Lato', serif;
             /* font-family: 'Arvo', serif; */
             /* font-family: 'Open Sans', sans-serif; */
@@ -71,16 +71,42 @@
                 background-color: #f7efdb;
             }
 
+            #google-container:hover #google-button {
+                background-color: white;
+                transition: 0.5s;
+            }
+
             #youtube-container:hover {
                 background-color: #ff00004d;
+            }
+
+            #youtube-container:hover #youtube-button {
+                /* border-radius: 0; */
+                color: #FF0000;
+                background-color: white;
+                /* width: 230px; */
+                /* font-weight: bold; */
+                transition: 0.5s;
             }
 
             #reddit-container:hover {
                 background-color: #ff450029;
             }
 
+            #reddit-container:hover #reddit-button {
+                color: #ff4500;
+                background-color: white;
+                transition: 0.5s;
+            }
+
             #twitter-container:hover {
                 background-color: #1989cf26;
+            }
+
+            #twitter-container:hover #twitter-button {
+                color: #1DA1F2;
+                background-color: white;
+                transition: 0.5s;
             }
 
                 .upper-logo {
@@ -99,7 +125,7 @@
 
                 #google-button {
                     color: #ff4500;
-                    background-color: white;
+                    background-color: #f7efdb;
                 }
 
                 #youtube-button {
