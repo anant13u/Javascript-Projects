@@ -3,11 +3,20 @@ const googleButton = document.getElementById('google-container')
 const youtubeButton = document.getElementById('youtube-container')
 const redditButton = document.getElementById('reddit-container')
 const twitterButton = document.getElementById('twitter-container')
+const searchBox = document.getElementById('search-box')
 
 googleButton.addEventListener('click',openGoogle)
 youtubeButton.addEventListener('click',openYoutube)
 redditButton.addEventListener('click',openReddit)
 twitterButton.addEventListener('click',openTwitter)
+
+searchBox.addEventListener('click', clearSearchBox)
+
+function clearSearchBox() {
+    if (searchBox.innerHTML=='Enter the search keyword here') {
+        searchBox.innerHTML=''
+    }
+}
 
 function openGoogle() {
     const searchQuery = document.getElementById('search-box').innerHTML
