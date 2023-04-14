@@ -37,6 +37,10 @@
             border: none;
         }
 
+        #search-box:hover {
+            cursor: pointer;
+        }
+
         .tabs-container-parent {
             /* border: 2px solid firebrick; */
             width: 700px;
@@ -63,7 +67,8 @@
             }
 
             .tabs-container-child:hover {
-                background-color: antiquewhite;
+                /* background-color: antiquewhite; */
+                cursor: pointer;
                 transition: 1s;
             }
 
@@ -140,7 +145,6 @@
                 }
 
                 #twitter-button {
-                    /* border: 1px solid #36c; */
                     background-color: #1DA1F2;
                     color: white;
                 }
