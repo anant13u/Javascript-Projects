@@ -16,6 +16,7 @@
 
         #main-header {
             margin: 60px 0 20px;
+            /* border: 2px solid greenyellow; */
             font-size: 48px;
             font-family: 'Lato', serif;
             /* font-family: 'Arvo', serif; */
@@ -48,7 +49,7 @@
             justify-content: center;
             flex-direction: row;
             /* align-items: center; */
-            /* gap: 10px; */
+            gap: 10px;
             flex-wrap: wrap;
         }
 
@@ -68,6 +69,7 @@
 
             .tabs-container-child:hover {
                 /* background-color: antiquewhite; */
+                transform: scale(1.07);
                 cursor: pointer;
                 transition: 1s;
             }
