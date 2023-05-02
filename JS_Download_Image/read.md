@@ -1,1 +1,0 @@
-This script lets you download any image by double-clicking on it.
