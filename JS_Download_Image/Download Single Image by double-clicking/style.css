@@ -1,7 +1,9 @@
 .parent {
     border: 2px solid salmon;
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
 
 }
 
@@ -11,6 +13,6 @@
     }
 
         img {
-            max-width: 33%;
+            max-width: 42%;
         }
 
