@@ -1,0 +1,42 @@
+
+
+.parent {
+    border: 2px solid salmon;
+    display: flex;
+    justify-content: center;
+}
+
+    .movie-details-container {
+        margin: 50px 0;
+        border: 2px solid gold;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        width: 30%;
+        height: 30%;
+        font-family: 'Lato', sans-serif;
+        font-weight: bold;
+    }
+
+        .child-container1, .child-container2, .child-container3 {
+            border: 2px solid purple;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            gap: 230px;
+            background-color: gray;
+        }
+
+            .label {
+                margin: 0 30px;
+                border: 1px solid gray;
+            }
+
+            .detail-area {
+                border: 1px solid gray;
+                background-color: gold;
+            }
+
+        #fetch-button {
+            
+        }
