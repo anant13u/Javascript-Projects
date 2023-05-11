@@ -27,12 +27,14 @@
         }
 
         .image-container-child:hover .download-link {
+            cursor: pointer;
             opacity: 1;
         }
 
         .image-container-child:hover .dwImage {
             filter: blur(1.5px);
-            cursor: pointer;;
+            opacity: 0.8;
+            cursor: pointer;
         }
 
             .dwImage {
