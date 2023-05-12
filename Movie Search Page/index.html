@@ -6,27 +6,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="parent">
+        <div class="search-image-container">
+            <div class="search-container">
+                <p id="movie-search-input" contenteditable="True"></p>
+                <button id="fetch-button">Fetch Details</button>
+            </div>
+            <img id="movie-poster" src="" alt="asdfsdf">
+        </div>
         <div class="movie-details-container">
-            <div class="child-container1">
-                <p class="label">Movie Name</p>
-                <p class="detail-area" id="movie-search-input" contenteditable="True">fsdfdf</p>
+            <div class="child-container">
+                <p class="label">Name</p>
+                <p class="detail-area" id="movie-name">ssdgs</p>
+                <p class="label">Year</p>
+                <p class="detail-area" id="movie-year">basdajd</p>
             </div>
-            <div class="child-container2">
-                <p class="label">Movie Year</p>
-                <p class="detail-area" id="movie-year">ssdgs</p>
-            </div>
-            <div class="child-container3">
-                <p class="label">Movie Genre</p>
+            <div class="child-container">
+                <p class="label">Genre</p>
                 <p class="detail-area" id="movie-genre">dfsfds</p>
+                <p class="label">Rating</p>
+                <p class="detail-area" id="movie-rating">fsdfsd</p>
             </div>
-            <button id="fetch-button">Fetch Details</button>
+            <div class="child-container">
+                <p class="label">Released</p>
+                <p class="detail-area" id="movie-released">ssdgs</p>
+                <p class="label">Runtime</p>
+                <p class="detail-area" id="movie-runtime">ssdgs</p>
+            </div>
+            <div class="child-container">
+                <p class="label">Actors</p>
+                <p class="detail-area" id="movie-actors">ssdgs</p>
+                <p class="label">Plot</p>
+                <p class="detail-area" id="movie-plot">ssdgs</p>
+            </div>
         </div>
     </div>
     
     <script src="script.js"></script>
 </body>
 </html>
+
+
+<!-- "Rated":"PG-13","Released":"02 Mar 2007","Runtime":"100 min" -->
+<!-- "Actors":"Tim Allen, Martin Lawrence, John Travolta","Plot":"A group of suburban biker wannabes looking for adventure hit the open road, but get more than they bargained for when they encounter a New Mexico gang called the Del Fuegos.","Language":"English","Country":"United States","Awards":"1 win & 4 nominations", -->
+<!-- "Poster":"https://m.media-amazon.com/images/M/MV5BZWZlMzQ5NmItNjBmMS00NDgyLThiNDYtZWU2MzA3YjZmOGU5XkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg" -->
