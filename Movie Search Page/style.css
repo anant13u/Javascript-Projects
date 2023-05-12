@@ -1,42 +1,114 @@
-
+body {
+    background: url(ben-griffiths-l7R85WBKl1c-unsplash.jpg);
+    backdrop-filter: blur(10px);
+    font-family: 'Lato', sans-serif;
+    font-size: 1em;
+    /* font-weight: bold; */
+}
 
 .parent {
-    border: 2px solid salmon;
+    margin: 1em 0;
+    border: 2px solid gold;
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* background-image: url(annie-spratt-6a3nqQ1YwBw-unsplash.jpg); */
     justify-content: center;
 }
 
+    .search-image-container {
+        border: 2px solid salmon;
+        display: flex;
+        gap: 5em;
+        width: 58em;
+        height: 20em;
+    }
+
+        .search-container {
+            /* margin: 5em 0 0; */
+            border: 2px solid gold;
+            display: flex;
+            align-items: center;
+            gap: 4em;
+            height: 20em;
+        }
+
+            #movie-search-input {
+                margin: 0;
+                border: 1px solid gray;
+                padding: 0.8em;
+                font-size: 1.1em;
+                font-weight: bold;
+                width: 17em;
+                text-align: center;
+                color: white;
+            }
+
+            #movie-search-input::before #movie-poster {
+                opacity: 0;
+            }
+
+            #fetch-button:hover {
+                cursor: pointer;
+            }
+
+            #fetch-button {
+                padding: 0.5em 1em;
+                background-color: #f3ce13;
+                /* height: 2em; */
+                /* width: 8em; */
+                font-size: 1.2em;
+                font-weight: bold;
+            }
+
+        #movie-poster {
+            /* margin: 0 0 0 3em; */
+            /* width: 10em; */
+            height: 20em;
+            /* width: 20em; */
+        }
+
     .movie-details-container {
-        margin: 50px 0;
-        border: 2px solid gold;
+        /* margin: 5em 0 0; */
+        border: 2px solid salmon;
         display: flex;
         flex-direction: column;
-        gap: 30px;
-        width: 30%;
-        height: 30%;
+        align-items: flex-start;
+        gap: 1em;
+        /* justify-content: space-between; */
+        width: 75em;
         font-family: 'Lato', sans-serif;
         font-weight: bold;
     }
 
-        .child-container1, .child-container2, .child-container3 {
-            border: 2px solid purple;
+        .child-container {
+            /* border: 2px solid greenyellow; */
             display: flex;
-            justify-content: flex-start;
-            align-items: center;
-            gap: 230px;
-            background-color: gray;
+            /* flex-wrap: wrap; */
+            /* gap: 1em; */
+            /* flex-direction: column; */
+            /* justify-content: center; */
+            align-items: flex-start;
+            /* background-color: gray; */
         }
 
+            .label, .detail-area {
+                font-size: 1.1em;
+
+            }
+
             .label {
-                margin: 0 30px;
+                margin: 2em 0 0 5.5em;
+                /* margin: 0 30px; */
                 border: 1px solid gray;
+                color: white;
+                width: 4.5em;
             }
 
             .detail-area {
+                margin: 2em 0 0 2em;
                 border: 1px solid gray;
-                background-color: gold;
+                /* background-color: gold; */
+                color: #5799ef;
+                width: 20em;
             }
-
-        #fetch-button {
-            
-        }
