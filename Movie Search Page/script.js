@@ -9,7 +9,7 @@ const movieActors = document.getElementById('movie-actors')
 const moviePlot = document.getElementById('movie-plot')
 const moviePoster = document.getElementById('movie-poster')
 
-// const fetchDetails = document.getElementById('fetch-button')
+const fetchDetails = document.getElementById('fetch-button')
 
 // const apiKey = '49c895a8'
 
@@ -17,8 +17,8 @@ const moviePoster = document.getElementById('movie-poster')
 //     searchInput.innerHTML=''
 // })
 
-// fetchDetails.addEventListener('click', getMovieDetails)
-searchInput.addEventListener('input', getMovieDetails)
+fetchDetails.addEventListener('click', getMovieDetails)
+// searchInput.addEventListener('input', getMovieDetails)
 
 function getMovieDetails() {
     const searchName = searchInput.innerHTML
