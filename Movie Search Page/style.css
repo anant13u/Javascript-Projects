@@ -1,6 +1,6 @@
 body {
-    background: url(ben-griffiths-l7R85WBKl1c-unsplash.jpg);
-    backdrop-filter: blur(10px);
+    background: url(paul-volkmer-fX-qWsXl5x8-unsplash.jpg);
+    /* backdrop-filter: blur(1px); */
     font-family: 'Lato', sans-serif;
     font-size: 1em;
     /* font-weight: bold; */
@@ -8,29 +8,34 @@ body {
 
 .parent {
     margin: 1em 0;
-    border: 2px solid gold;
+    /* border: 2px solid gold; */
     display: flex;
     flex-direction: column;
     align-items: center;
     /* background-image: url(annie-spratt-6a3nqQ1YwBw-unsplash.jpg); */
-    justify-content: center;
+    justify-content: flex-start;
 }
 
     .search-image-container {
-        border: 2px solid salmon;
+        margin: 2em 0 2em;
+        /* border: 2px solid salmon; */
         display: flex;
-        gap: 5em;
-        width: 58em;
-        height: 20em;
+        justify-content: flex-start;
+        /* gap: 4em; */
+        width: 60em;
+        height: 24em;
     }
 
         .search-container {
-            /* margin: 5em 0 0; */
-            border: 2px solid gold;
+            margin-left: 3em;
+            /* border: 2px solid gold; */
             display: flex;
+            flex-direction: column;
+            justify-content: center;
             align-items: center;
-            gap: 4em;
-            height: 20em;
+            gap: 2em;
+            width: 30em;
+            /* height: 20em; */
         }
 
             #movie-search-input {
@@ -62,15 +67,18 @@ body {
             }
 
         #movie-poster {
+            margin-left: 5em;
             /* margin: 0 0 0 3em; */
+            /* border-radius: 2px; */
+            /* border: 2px solid gold; */
             /* width: 10em; */
-            height: 20em;
+            height: 23em;
             /* width: 20em; */
         }
 
     .movie-details-container {
         /* margin: 5em 0 0; */
-        border: 2px solid salmon;
+        /* border: 2px solid salmon; */
         display: flex;
         flex-direction: column;
         align-items: flex-start;
@@ -93,21 +101,19 @@ body {
         }
 
             .label, .detail-area {
+                /* border: 1px solid gray; */
                 font-size: 1.1em;
-
             }
 
             .label {
                 margin: 2em 0 0 5.5em;
                 /* margin: 0 30px; */
-                border: 1px solid gray;
                 color: white;
                 width: 4.5em;
             }
 
             .detail-area {
                 margin: 2em 0 0 2em;
-                border: 1px solid gray;
                 /* background-color: gold; */
                 color: #5799ef;
                 width: 20em;
