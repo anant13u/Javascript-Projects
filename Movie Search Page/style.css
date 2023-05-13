@@ -107,14 +107,21 @@ body {
 
             .label {
                 margin: 2em 0 0 5.5em;
-                /* margin: 0 30px; */
                 color: white;
                 width: 4.5em;
             }
 
             .detail-area {
                 margin: 2em 0 0 2em;
-                /* background-color: gold; */
                 color: #5799ef;
                 width: 20em;
             }
+
+    .trailer-container {
+        margin: 5em;
+        border: 2px solid greenyellow;
+    }
+
+        #trailer {
+            height: 20em;
+        }
