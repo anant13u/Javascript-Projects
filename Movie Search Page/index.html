@@ -10,43 +10,43 @@
 </head>
 <body>
     <div class="parent">
-        <div class="search-image-container">
-            <div class="search-container">
-                <p id="movie-search-input" contenteditable="True"></p>
-                <button id="fetch-button">Fetch Details</button>
-                <button id="trailer-button">Get Trailer</button>
-            </div>
-            <img id="movie-poster" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mN88eD1HwAENwK5wwhTfQAAAABJRU5ErkJggg==" alt="asdfsdf">
+        <div class="search-container">
+            <p id="movie-search-input" contenteditable="True"></p>
+            <button class="button" id="fetch-details-button">Fetch Details</button>
+            <button class="button" id="get-trailer-button">Get Trailer</button>
         </div>
-        <div class="movie-details-container">
-            <div class="child-container">
-                <p class="label">Name</p>
-                <p class="detail-area" id="movie-name"></p>
-                <p class="label">Year</p>
-                <p class="detail-area" id="movie-year"></p>
-            </div>
-            <div class="child-container">
-                <p class="label">Genre</p>
-                <p class="detail-area" id="movie-genre"></p>
-                <p class="label">Rating</p>
-                <p class="detail-area" id="movie-rating"></p>
-            </div>
-            <div class="child-container">
-                <p class="label">Released</p>
-                <p class="detail-area" id="movie-released"></p>
-                <p class="label">Runtime</p>
-                <p class="detail-area" id="movie-runtime"></p>
-            </div>
-            <div class="child-container">
-                <p class="label">Actors</p>
-                <p class="detail-area" id="movie-actors"></p>
-                <p class="label">Plot</p>
-                <p class="detail-area" id="movie-plot"></p>
+        <div class="details-image-container">
+            <img id="movie-poster" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mN88eD1HwAENwK5wwhTfQAAAABJRU5ErkJggg==" alt="asdfsdf">
+            <div class="movie-details-container">
+                <div class="child-container">
+                    <p class="label">Name</p>
+                    <p class="detail-area" id="movie-name"></p>
+                    <p class="label">Year</p>
+                    <p class="detail-area" id="movie-year"></p>
+                </div>
+                <div class="child-container">
+                    <p class="label">Genre</p>
+                    <p class="detail-area" id="movie-genre"></p>
+                    <p class="label">Rating</p>
+                    <p class="detail-area" id="movie-rating"></p>
+                </div>
+                <div class="child-container">
+                    <p class="label">Released</p>
+                    <p class="detail-area" id="movie-released"></p>
+                    <p class="label" id="runtime-label">Runtime</p>
+                    <p class="detail-area" id="movie-runtime"></p>
+                </div>
+                <div class="child-container">
+                    <p class="label">Actors</p>
+                    <p class="detail-area" id="movie-actors"></p>
+                    <p class="label">Plot</p>
+                    <p class="detail-area" id="movie-plot"></p>
+                </div>
             </div>
         </div>
         <div class="trailer-container">
-            <div id="trailer1"></div>
-            <div id="trailer2"></div>
+            <div class="trailer" id="trailer1"></div>
+            <div class="trailer" id="trailer2"></div>
             <!-- <img id="trailer-thumbnail"></img> -->
         </div>
     </div>
