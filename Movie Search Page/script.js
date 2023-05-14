@@ -9,10 +9,12 @@ const movieActors = document.getElementById('movie-actors')
 const moviePlot = document.getElementById('movie-plot')
 const moviePoster = document.getElementById('movie-poster')
 
-const fetchDetails = document.getElementById('fetch-button')
+const labels = document.querySelectorAll('.label');
+
+const fetchDetails = document.getElementById('fetch-details-button')
 
 const ytApiKey = 'AIzaSyCTUTvvpzzcodbELs4jfDdSNOybbmOglOU'
-const trailerButton = document.getElementById('trailer-button')
+const trailerButton = document.getElementById('get-trailer-button')
 const movieTrailer1 = document.getElementById('trailer1')
 const movieTrailer2 = document.getElementById('trailer2')
 
@@ -48,6 +50,10 @@ function getMovieDetails() {
             movieActors.innerHTML=data.Actors
             moviePlot.innerHTML=data.Plot
             moviePoster.src = data.Poster
+
+            labels.forEach(label=>{
+                label.style.visibility='visible'
+            })
         })
 }
 
