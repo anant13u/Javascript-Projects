@@ -1,5 +1,5 @@
 body {
-    background: url(paul-volkmer-fX-qWsXl5x8-unsplash.jpg);
+    background: url(Background-Images/paul-volkmer-fX-qWsXl5x8-unsplash.jpg);
     background-size: cover;
     /* backdrop-filter: blur(1px); */
     font-family: 'Lato', sans-serif;
@@ -18,7 +18,7 @@ body {
 
     .search-container {
         margin: 0 0 2em;
-        /* border: 2px solid gold; */
+        /* border: 2px solid green; */
         display: flex;
         /* flex-direction: column; */
         justify-content: center;
@@ -51,7 +51,7 @@ body {
             opacity: 0;
         }
 
-        #fetch-details-button:hover, #trailer-button:hover {
+        #fetch-details-button:hover, #get-trailer-button:hover {
             cursor: pointer;
         }
 
@@ -69,9 +69,11 @@ body {
         }
 
     .details-image-container {
+        margin: 0 0 2em;
         /* border: 2px solid greenyellow; */
         display: flex;
         justify-content: space-evenly;
+        align-items: center;
         /* gap: 2em; */
     }
 
@@ -81,7 +83,7 @@ body {
             border-radius: 2px;
             /* border: 2px solid gold; */
             /* width: 10em; */
-            height: 23em;
+            height: 22em;
             /* width: 20em; */
         }
 
@@ -94,6 +96,7 @@ body {
             gap: 1em;
             justify-content: center;
             width: 75em;
+            height: 26em;
             font-family: 'Lato', sans-serif;
             font-weight: bold;
         }
@@ -126,6 +129,27 @@ body {
                     color: #5799ef;
                     width: 20em;
                 }
+
+    .actor-poster-container {
+        /* border: 2px solid greenyellow; */
+        display: flex;
+        gap: 3em;
+        /* width: 60em; */
+        height: 22em;
+    }
+
+        .tmdb-actor-poster {
+            /* border: 2px solid salmon; */
+            border-radius: 10px;
+            height: 17em;
+        }
+
+        .tmdb-actor-name {
+            /* margin: 0; */
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #5799ef;
+        }
 
     .trailer-container {
         margin: 4em;
