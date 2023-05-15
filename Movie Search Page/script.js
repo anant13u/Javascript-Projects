@@ -20,7 +20,8 @@ const movieTrailer2 = document.getElementById('trailer2')
 
 // const functions = [getMovieDetails, fetchTrailer]
 
-// const apiKey = '49c895a8'
+const omdbApiKey = '49c895a8'
+const tmdbApiKey = '8f4e08763ae78fdcec7249f5094c7d82'
 
 // fetchDetails.addEventListener('click', () => {
 //     getMovieDetails(searchInput.value)
@@ -32,12 +33,16 @@ const movieTrailer2 = document.getElementById('trailer2')
 fetchDetails.addEventListener('click', getMovieDetails)
 trailerButton.addEventListener('click',fetchTrailer)
 
+
+
+
 function getMovieDetails() {
     const searchName = searchInput.innerHTML
-    console.log(movieName)
+    const omdbApi = `https://www.omdbapi.com/?apikey=${omdbApiKey}&t=${searchName}`
+    console.log(searchName)
 
     // fetch(`https://www.omdbapi.com/?apikey=${apiKey}&t=${movieName}`)
-    fetch(`https://www.omdbapi.com/?apikey=49c895a8&t=${searchName}`)
+    fetch(omdbApi)
         .then(Response => Response.json())
         .then(data => {
             movieName.innerHTML=data.Title
@@ -54,6 +59,50 @@ function getMovieDetails() {
             labels.forEach(label=>{
                 label.style.visibility='visible'
             })
+        })
+
+    const tmdbApi = `https://api.themoviedb.org/3/search/movie?api_key=${tmdbApiKey}&query=${searchName}`;
+
+    fetch(tmdbApi)
+        .then(response => response.json())
+        .then(data => {
+            // Get the movie id from the first search result
+            const tmdbMovieId = data.results[0].id
+            console.log(`tmdbMovieId is ${tmdbMovieId}`)
+            // Fetch the movie credits by id
+            fetch(`https://api.themoviedb.org/3/movie/${tmdbMovieId}/credits?api_key=${tmdbApiKey}`)
+                .then(response=>response.json())
+                .then(data=>{
+                    const tmdbMovieActors=data.cast.slice(0,5)
+                    const tmdbActorsImages = tmdbMovieActors.map (actor => {
+                        return `https://image.tmdb.org/t/p/w500${actor.profile_path}`
+                    })
+                    tmdbActorsImages.forEach((imageUrl, index) => {
+                        const tmdbActorPoster = document.getElementById(`tmdb-actor-poster${index+1}`)
+                        // tmdbActorPoster.src=actor.actorPoster
+                        tmdbActorPoster.src = imageUrl;
+                        // const tmdbActorName = document.getElementById(`tmdb-actor-name${index+1}`)
+                        // tmdbActorName.innerHTML=actor.actorName
+                    })
+
+                    // const tmdbActorImages = tmdbMovieActors.map(actor => {
+                    //     return `https://image.tmdb.org/t/p/w500${actor.profile_path}`;
+                    //   });
+                    // const tmdbActorNames=tmdbMovieActors.map(actor => actor.name)
+
+                    // tmdbActorImages.forEach((imageUrl, index) => {
+                    //     // `tmdbPoster${index}.src=${imageUrl}`
+                    //     const tmdbActorPoster = document.getElementById(`tmdb-actor-poster${index+1}`)
+                    //     // `tmdbPoster${index+1}`.src = imageUrl
+                    //     tmdbActorPoster.src = imageUrl
+                    //     // console.log(tmdbActorPoster)
+                    // })
+
+                    // tmdbActorNames.forEach((actorname,index) => {
+                    //     const tmdbActorName = document.getElementById(`tmdb-actor-name${index+1}`)
+                    //     tmdbActorName.innerHTML=actorname
+                    // })
+                })
         })
 }
 
@@ -96,6 +145,11 @@ async function fetchTrailer() {
 
         movieTrailer1.innerHTML = iframeHtml1
         movieTrailer2.innerHTML = iframeHtml2
+
+        // const currentUrl = window.location.href
+        // const newWindow = window.open(currentUrl, '_blank')
+        // newWindow.focus()
+
         // return { videoUrl, thumbnailUrl };
     } catch (error) {
         console.log(error);
