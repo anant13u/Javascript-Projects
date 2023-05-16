@@ -8,7 +8,7 @@ body {
 
 .parent {
     margin: 1em 0;
-    /* border: 2px solid gold; */
+    border: 2px solid gold;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -16,122 +16,135 @@ body {
     justify-content: flex-start;
 }
 
-    .search-container {
-        margin: 0 0 2em;
-        /* border: 2px solid green; */
+    .movie-poster-search-details-container {
+        border: 2px solid gray;
         display: flex;
-        /* flex-direction: column; */
-        justify-content: center;
         align-items: center;
-        gap: 3em;
-        width: 60em;
-        height: 7em;
-        /* width: 30em; */
-        /* height: 20em; */
-    }
-
-        #movie-search-input {
-            margin: 0;
-            border: 1px solid gray;
-            padding: 0.8em;
-            font-size: 1.1em;
-            font-weight: bold;
-            width: 19em;
-            text-align: center;
-            color: white;
-        }
-
-        .button {
-            padding: 0.5em 1em;
-            font-size: 1.2em;
-            font-weight: bold;
-        }
-
-        #movie-search-input::before #movie-poster {
-            opacity: 0;
-        }
-
-        #fetch-details-button:hover, #get-trailer-button:hover {
-            cursor: pointer;
-        }
-
-        #fetch-details-button {
-            background-color: #f3ce13;
-            /* height: 2em; */
-            /* width: 8em; */
-        }
-
-        #get-trailer-button {
-            /* border-radius: 5%/50%; */
-            background-color: #FF0000;
-            color: white;
-            width: 8em;
-        }
-
-    .details-image-container {
-        margin: 0 0 2em;
-        /* border: 2px solid greenyellow; */
-        display: flex;
-        justify-content: space-evenly;
-        align-items: center;
-        /* gap: 2em; */
     }
 
         #movie-poster {
-            margin-left: 5em;
+            /* margin-left: 5em; */
             /* margin: 0 0 0 3em; */
             border-radius: 2px;
             /* border: 2px solid gold; */
             /* width: 10em; */
-            height: 22em;
+            height: 30em;
             /* width: 20em; */
         }
 
-        .movie-details-container {
-            /* margin: 5em 0 0; */
-            /* border: 2px solid salmon; */
+        .search-plus-details-container {
+            border: 3px solid red;
             display: flex;
             flex-direction: column;
-            align-items: flex-start;
-            gap: 1em;
-            justify-content: center;
-            width: 75em;
-            height: 26em;
-            font-family: 'Lato', sans-serif;
-            font-weight: bold;
         }
 
-            .child-container {
-                /* border: 2px solid greenyellow; */
+            .search-container {
+                margin: 0 0 2em;
+                border: 2px solid green;
                 display: flex;
-                /* flex-wrap: wrap; */
-                /* gap: 1em; */
                 /* flex-direction: column; */
-                /* justify-content: center; */
-                align-items: flex-start;
-                /* background-color: gray; */
+                justify-content: center;
+                align-items: center;
+                gap: 3em;
+                width: 60em;
+                height: 7em;
+                /* width: 30em; */
+                /* height: 20em; */
             }
 
-                .label, .detail-area {
-                    /* border: 1px solid gray; */
+                #movie-search-input {
+                    margin: 0;
+                    border: 1px solid gray;
+                    padding: 0.8em;
                     font-size: 1.1em;
-                }
-
-                .label {
-                    margin: 2em 0 0 4em;
+                    font-weight: bold;
+                    width: 19em;
+                    text-align: center;
                     color: white;
-                    width: 4.5em;
-                    visibility: hidden;
                 }
 
-                .detail-area {
-                    margin: 2em 0 0 2em;
-                    color: #5799ef;
-                    width: 20em;
+                .button {
+                    padding: 0.5em 1em;
+                    font-size: 1.2em;
+                    font-weight: bold;
                 }
+
+                #movie-search-input::before #movie-poster {
+                    opacity: 0;
+                }
+
+                #fetch-details-button:hover, #get-trailer-button:hover {
+                    cursor: pointer;
+                }
+
+                #fetch-details-button {
+                    background-color: #f3ce13;
+                    /* height: 2em; */
+                    /* width: 8em; */
+                }
+
+                #get-trailer-button {
+                    /* border-radius: 5%/50%; */
+                    background-color: #FF0000;
+                    color: white;
+                    width: 8em;
+                }
+
+            .details-image-container {
+                /* margin: 0 0 2em; */
+                border: 2px solid greenyellow;
+                display: flex;
+                justify-content: space-evenly;
+                align-items: center;
+                /* gap: 2em; */
+            }
+
+
+                .movie-details-container {
+                    /* margin: 5em 0 0; */
+                    /* border: 2px solid salmon; */
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    gap: 1em;
+                    justify-content: center;
+                    width: 75em;
+                    height: 26em;
+                    font-family: 'Lato', sans-serif;
+                    font-weight: bold;
+                }
+
+                    .child-container {
+                        /* border: 2px solid greenyellow; */
+                        display: flex;
+                        /* flex-wrap: wrap; */
+                        /* gap: 1em; */
+                        /* flex-direction: column; */
+                        /* justify-content: center; */
+                        align-items: flex-start;
+                        /* background-color: gray; */
+                    }
+
+                        .label, .detail-area {
+                            /* border: 1px solid gray; */
+                            font-size: 1.1em;
+                        }
+
+                        .label {
+                            margin: 2em 0 0 4em;
+                            color: white;
+                            width: 4.5em;
+                            visibility: hidden;
+                        }
+
+                        .detail-area {
+                            margin: 2em 0 0 2em;
+                            color: #5799ef;
+                            width: 20em;
+                        }
 
     .actor-poster-container {
-        /* border: 2px solid greenyellow; */
+        border: 2px solid greenyellow;
         display: flex;
         gap: 3em;
         /* width: 60em; */
