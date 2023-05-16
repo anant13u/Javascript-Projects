@@ -8,18 +8,74 @@ body {
 
 .parent {
     margin: 1em 0;
-    border: 2px solid gold;
+    /* border: 2px solid gold; */
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* background-image: url(annie-spratt-6a3nqQ1YwBw-unsplash.jpg); */
     justify-content: flex-start;
+    gap: 2em;
 }
 
-    .movie-poster-search-details-container {
-        border: 2px solid gray;
+    .search-container {
+        margin: 1em 0 0;
+        /* border: 2px solid green; */
         display: flex;
+        /* flex-direction: column; */
+        justify-content: center;
         align-items: center;
+        gap: 3em;
+        width: 60em;
+        height: 7em;
+        /* width: 30em; */
+        /* height: 20em; */
+    }
+
+        #movie-search-input {
+            margin: 0;
+            border: 1px solid gray;
+            padding: 0.8em;
+            font-size: 1.1em;
+            font-weight: bold;
+            width: 19em;
+            text-align: center;
+            color: white;
+        }
+
+        .button {
+            padding: 0.5em 1em;
+            font-size: 1.2em;
+            font-weight: bold;
+        }
+
+        #movie-search-input::before #movie-poster {
+            opacity: 0;
+        }
+
+        #fetch-details-button:hover, #get-trailer-button:hover {
+            cursor: pointer;
+        }
+
+        #fetch-details-button {
+            background-color: #f3ce13;
+            /* height: 2em; */
+            /* width: 8em; */
+        }
+
+        #get-trailer-button {
+            /* border-radius: 5%/50%; */
+            background-color: #FF0000;
+            color: white;
+            width: 8em;
+        }
+
+    .details-image-container {
+        /* margin: 0 0 2em; */
+        /* border: 2px solid salmon; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 80em;
+        gap: 2em;
     }
 
         #movie-poster {
@@ -27,134 +83,67 @@ body {
             /* margin: 0 0 0 3em; */
             border-radius: 2px;
             /* border: 2px solid gold; */
-            /* width: 10em; */
-            height: 30em;
+            width: 15em;
+            /* height: 23em; */
             /* width: 20em; */
         }
 
-        .search-plus-details-container {
-            border: 3px solid red;
+
+        .movie-details-container {
+            /* margin: 5em 0 0; */
+            /* border: 2px solid gold; */
             display: flex;
             flex-direction: column;
+            align-items: center;
+            gap: 1em;
+            justify-content: center;
+            width: 60em;
+            height: 24em;
+            font-family: 'Lato', sans-serif;
+            font-weight: bold;
         }
 
-            .search-container {
-                margin: 0 0 2em;
-                border: 2px solid green;
+            .child-container {
+                /* border: 2px solid greenyellow; */
                 display: flex;
+                /* flex-wrap: wrap; */
+                /* gap: 1em; */
                 /* flex-direction: column; */
-                justify-content: center;
-                align-items: center;
-                gap: 3em;
-                width: 60em;
-                height: 7em;
-                /* width: 30em; */
-                /* height: 20em; */
+                /* justify-content: center; */
+                /* align-items: flex-start; */
+                /* background-color: gray; */
             }
 
-                #movie-search-input {
-                    margin: 0;
-                    border: 1px solid gray;
-                    padding: 0.8em;
+                .label, .detail-area {
+                    /* border: 1px solid gray; */
                     font-size: 1.1em;
-                    font-weight: bold;
-                    width: 19em;
-                    text-align: center;
+                }
+
+                .label {
+                    /* margin: 2em 0 0 2em; */
                     color: white;
+                    width: 5em;
+                    visibility: hidden;
                 }
 
-                .button {
-                    padding: 0.5em 1em;
-                    font-size: 1.2em;
-                    font-weight: bold;
+                .detail-area {
+                    /* margin: 2em 0 0 2em; */
+                    color: #5799ef;
+                    width: 20em;
                 }
-
-                #movie-search-input::before #movie-poster {
-                    opacity: 0;
-                }
-
-                #fetch-details-button:hover, #get-trailer-button:hover {
-                    cursor: pointer;
-                }
-
-                #fetch-details-button {
-                    background-color: #f3ce13;
-                    /* height: 2em; */
-                    /* width: 8em; */
-                }
-
-                #get-trailer-button {
-                    /* border-radius: 5%/50%; */
-                    background-color: #FF0000;
-                    color: white;
-                    width: 8em;
-                }
-
-            .details-image-container {
-                /* margin: 0 0 2em; */
-                border: 2px solid greenyellow;
-                display: flex;
-                justify-content: space-evenly;
-                align-items: center;
-                /* gap: 2em; */
-            }
-
-
-                .movie-details-container {
-                    /* margin: 5em 0 0; */
-                    /* border: 2px solid salmon; */
-                    display: flex;
-                    flex-direction: column;
-                    align-items: flex-start;
-                    gap: 1em;
-                    justify-content: center;
-                    width: 75em;
-                    height: 26em;
-                    font-family: 'Lato', sans-serif;
-                    font-weight: bold;
-                }
-
-                    .child-container {
-                        /* border: 2px solid greenyellow; */
-                        display: flex;
-                        /* flex-wrap: wrap; */
-                        /* gap: 1em; */
-                        /* flex-direction: column; */
-                        /* justify-content: center; */
-                        align-items: flex-start;
-                        /* background-color: gray; */
-                    }
-
-                        .label, .detail-area {
-                            /* border: 1px solid gray; */
-                            font-size: 1.1em;
-                        }
-
-                        .label {
-                            margin: 2em 0 0 4em;
-                            color: white;
-                            width: 4.5em;
-                            visibility: hidden;
-                        }
-
-                        .detail-area {
-                            margin: 2em 0 0 2em;
-                            color: #5799ef;
-                            width: 20em;
-                        }
 
     .actor-poster-container {
-        border: 2px solid greenyellow;
+        /* border: 2px solid greenyellow; */
         display: flex;
         gap: 3em;
         /* width: 60em; */
-        height: 22em;
+        /* height: 22em; */
     }
 
         .tmdb-actor-poster {
             /* border: 2px solid salmon; */
             border-radius: 10px;
-            height: 17em;
+            height: 15em;
         }
 
         .tmdb-actor-name {
@@ -165,7 +154,7 @@ body {
         }
 
     .trailer-container {
-        margin: 4em;
+        margin: 3em 0 0;
         /* border: 2px solid greenyellow; */
         border-radius: 25px;
         display: flex;
