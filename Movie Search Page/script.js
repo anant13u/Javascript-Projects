@@ -36,13 +36,13 @@ trailerButton.addEventListener('click',fetchTrailer)
 
 
 
-function getMovieDetails() {
+async function getMovieDetails() {
     const searchName = searchInput.innerHTML
     const omdbApi = `https://www.omdbapi.com/?apikey=${omdbApiKey}&t=${searchName}`
     console.log(searchName)
 
     // fetch(`https://www.omdbapi.com/?apikey=${apiKey}&t=${movieName}`)
-    fetch(omdbApi)
+    await fetch(omdbApi)
         .then(Response => Response.json())
         .then(data => {
             movieName.innerHTML=data.Title
@@ -63,7 +63,7 @@ function getMovieDetails() {
 
     const tmdbApi = `https://api.themoviedb.org/3/search/movie?api_key=${tmdbApiKey}&query=${searchName}`;
 
-    fetch(tmdbApi)
+    await fetch(tmdbApi)
         .then(response => response.json())
         .then(data => {
             // Get the movie id from the first search result
@@ -138,9 +138,9 @@ async function fetchTrailer() {
         const embedUrl2 = `https://www.youtube.com/embed/${videoID2}`;
         console.log(`Embed URL is ${thumbnailUrl2}`)
 
-        const iframeHtml1 = `<iframe width="560" height="315" src="${embedUrl1}" frameborder="0" allowfullscreen></iframe>`;
+        const iframeHtml1 = `<iframe width="560" height="315" src="${embedUrl1}" frameborder="0" style='border-radius:15px' allowfullscreen></iframe>`;
         console.log(`iFrameHtml is ${iframeHtml1}`)
-        const iframeHtml2 = `<iframe width="560" height="315" src="${embedUrl2}" frameborder="0" allowfullscreen></iframe>`;
+        const iframeHtml2 = `<iframe width="560" height="315" src="${embedUrl2}" frameborder="0" style='border-radius:15px' allowfullscreen></iframe>`;
         console.log(`iFrameHtml is ${iframeHtml2}`)
 
         movieTrailer1.innerHTML = iframeHtml1
