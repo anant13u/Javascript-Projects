@@ -53,6 +53,10 @@
                 opacity: 0;
             }
 
+            .download-link:hover {
+                cursor: pointer;
+            }
+
             /* .download-link:hover + .dwImage {
                 filter: blur(1px);
             } */
