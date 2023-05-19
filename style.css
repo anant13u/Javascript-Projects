@@ -23,7 +23,7 @@ body {
         align-items: center;
         justify-content: center;
         gap: 2em;
-        height: 40em;
+        min-height: 45em;
         /* width: 50em; */
         min-width: 42em;
         /* background-color: rgb(168, 161, 161); */
@@ -42,7 +42,7 @@ body {
             /* background-color: #039180; */
             background-color: #093145;
             /* background: linear-gradient(to right, #6DE195 10%, #C4E759 90%); */
-            font-size: 1.2em;
+            font-size: 1.2rem;
             font-family: 'Lato', sans-serif;
             /* font-family: 'Roboto', sans-serif; */
             font-weight: 400;
