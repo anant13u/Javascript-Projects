@@ -1,6 +1,8 @@
 const uploadButton = document.getElementById('upload-button')
 const buttonContainer = document.getElementById('button-container')
-const imageContainer = document.getElementById('image-container');
+const imagesContainer = document.getElementById('images-container');
+
+imagesContainer.style.visibility='hidden'
 
 buttonContainer.addEventListener('click', () => {
     uploadButton.click()
@@ -11,29 +13,45 @@ uploadButton.addEventListener('change', function(event) {
     
     // Create a new container for the uploaded images
     // const container = document.getElementById('image-container');
-    imageContainer.innerHTML=''
+    imagesContainer.innerHTML=''
     // container.classList.add('image-container');
     
     // Loop through each selected file
     for (let i = 0; i < files.length; i++) {
       const file = files[i];
+
+      // Create a new container for the image and download link
+      const container = document.createElement('div');
+      container.classList.add('image-download-container');
+      // container.style.display='flex'
       
       // Create a new image element
       const image = document.createElement('img');
-    //   const image = document.createElement;
-      
+      image.classList.add('downloadImage')
       // Set the image source to the uploaded file
       image.src = URL.createObjectURL(file);
-      
       // Add the image to the container
-      imageContainer.appendChild(image);
+      container.appendChild(image);
 
       // Create a download link for the image
       const downloadLink = document.createElement('a');
+      downloadLink.classList.add('download-link')
       downloadLink.href = URL.createObjectURL(file);
       downloadLink.download=file.name
-      downloadLink.textContent = 'Download';
-      imageContainer.appendChild(downloadLink);
+      // downloadLink.textContent = 'Download';
+      
+      const downloadIcon = document.createElement('i')
+      downloadIcon.classList.add('fa')
+      downloadIcon.classList.add('fa-download')
+      console.log(downloadIcon)
+      
+      downloadLink.appendChild(downloadIcon)
+      console.log(downloadLink)
+      container.appendChild(downloadLink);
+      console.log(container)
+
+      imagesContainer.appendChild(container);
+      imagesContainer.style.visibility='visible'
     }
 
     
