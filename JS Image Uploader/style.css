@@ -30,19 +30,69 @@
             /* padding: 2em; */
         }
 
-    .image-container {
-        /* border: 2px solid gold; */
+    .images-container {
         margin: 4em 2em;
+        /* border: 2px solid gold; */
+        border-radius: 7px;
+        padding: 2em 0;
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
         gap: 2em;
-        /* background-color: gray; */
+        background-color: #ebebeb;
         width: 90em;
     }
 
-        img {
-            /* margin: 1em; */
-            border-radius: 7px;
-            height: 15em;
+        .image-download-container {
+            /* border: 2px solid salmon; */
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            /* align-items: flex-end; */
         }
+
+        .image-download-container:hover .downloadImage {
+            filter: blur(0.05em);
+        }
+
+        .image-download-container:hover .download-link {
+            visibility: visible;
+            /* opacity: 0.5; */
+        }
+
+            .downloadImage {
+                /* margin: 1em; */
+                border-radius: 7px;
+                /* position: fixed; */
+                height: 15em;
+            }
+
+            .download-link {
+                position: absolute;
+                visibility: hidden;
+                /* opacity: 0; */
+                bottom: 1.5rem;
+                right: 2rem;
+                /* text-decoration: none; */
+                font-size: 2rem;
+                color: #ffffff;
+            }
+
+            /* .download-link:hover {
+                opacity: 0.5;
+            } */
+
+
+
+            .download-link:hover + img {
+                filter: blur(0.5em);
+
+            }
+
+
+            /* .fa {
+            } */
+
+            
+            /* downloadLink.style.color='black' */
+            /* downloadLink.style.textDecoration='none' */
