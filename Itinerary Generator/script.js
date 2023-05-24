@@ -1,5 +1,5 @@
 mapboxgl.accessToken = 'pk.eyJ1IjoiYW5hbnQxM3UiLCJhIjoiY2xpMXJoZ2RvMDcyNjNkcGd5bnUwaG04aiJ9.l6C9K2TmrHuGYlHoE_-ZGA';
-
+const citiesContainer = document.getElementById('cities-container')
 
 // Creating a new map instance
 const map = new mapboxgl.Map({
@@ -21,8 +21,12 @@ map.on('click', async (e) => {
     try {
         const response = await fetch(`https://api.mapbox.com/geocoding/v5/mapbox.places/${lng},${lat}.json?types=place&access_token=${mapboxgl.accessToken}`);
         const data = await response.json();
-        const cityName = data.features[0].text;
+        const place = data.features[0]
+        const cityName = document.createElement('div')
+        cityName.innerHTML = place.text;
+
         console.log('Selected city:', cityName);
+        citiesContainer.appendChild(cityName)
 
     } catch (error) {
         console.log('Error: ',error)
