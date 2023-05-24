@@ -1,5 +1,12 @@
-#map {
-    width: 100em;
-    height: 40em;
-  }
+.map-container {
+    border: 2px solid salmon;
+    display: flex;
+    justify-content: center;
+}
+
+    #map {
+        width: 100em;
+        height: 40em;
+    }
+    
   
