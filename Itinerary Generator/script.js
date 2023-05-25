@@ -22,11 +22,15 @@ map.on('click', async (e) => {
         const response = await fetch(`https://api.mapbox.com/geocoding/v5/mapbox.places/${lng},${lat}.json?types=place&access_token=${mapboxgl.accessToken}`);
         const data = await response.json();
         const place = data.features[0]
+
         const cityName = document.createElement('div')
         cityName.innerHTML = place.text;
-
-        console.log('Selected city:', cityName);
+        console.log('Selected city:', place.text);
         citiesContainer.appendChild(cityName)
+
+        // const address = document.createElement('div')
+        // address.innerHTML = place.properties.address;
+        // citiesContainer.appendChild(address)
 
     } catch (error) {
         console.log('Error: ',error)
