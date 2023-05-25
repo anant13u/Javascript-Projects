@@ -6,7 +6,13 @@
 
     #map {
         width: 100em;
-        height: 40em;
+        height: 50em;
     }
-    
+
+    .cities-container {
+        border: 2px solid gold;
+        display: flex;
+        flex-direction: column;
+    }
+
   
