@@ -2,17 +2,35 @@
     border: 2px solid salmon;
     display: flex;
     justify-content: center;
+    /* gap: 1em; */
 }
 
     #map {
+        margin: 1em;
+        border: 2px solid gold;
         width: 100em;
         height: 50em;
     }
 
     .cities-container {
+        margin: 1em;
         border: 2px solid gold;
         display: flex;
         flex-direction: column;
     }
 
+        .new-city {
+            margin: 1em 1em 0;
+            border: 1px solid salmon;
+            border-radius: 0.3em;
+            padding: 0.7em 1em;
+            font-weight: bold;
+            cursor: pointer;
+            text-align: center;
+        }
+
+        .selected {
+            background-color: salmon;
+            color: white;
+        }
   
