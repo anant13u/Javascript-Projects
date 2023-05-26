@@ -52,13 +52,15 @@ body {
 @media (max-width: 768px) {
     /* Adjust font size and container height for smaller devices */
     .page-link {
-        font-size: 0.8em;
+        font-size: 0.7em;
     }
 
     .link-container {
         min-width: 12em;
         width: 18em;
-        height: auto;
+        min-height: 20em;
+        height: 35em;
+        /* height: auto; */
         padding: 1em;
     }
 }
