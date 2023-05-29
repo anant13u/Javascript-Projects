@@ -26,41 +26,46 @@ map.on('click', async (e) => {
         const data = await response.json(); // Retrieve the geocoding data for the selected location
         const place = data.features[0]; // Get the first place result from the geocoding data
 
-        const cityDiv = document.createElement('div'); // Create a new div element for the city
-        cityDiv.innerHTML = place.text; // Set the inner HTML of the div to the city name
-        cityDiv.classList.add('new-city'); // Add the 'new-city' class to the div
-        console.log('Selected city:', place.text);
-        citiesContainer.appendChild(cityDiv); // Append the city div to the cities container
+        const cityDiv = createCityElement(place.text);
+        addCityEventListener(cityDiv);
     } catch (error) {
         console.log('Error: ',error);
     }
-
-    const cities = document.querySelectorAll('.new-city');
-    cities.forEach(city => {
-        city.addEventListener('click', () => {
-            // Center the map on the selected city
-            const cityName = city.innerHTML; // Get the name of the selected city
-            fetch(`https://api.mapbox.com/geocoding/v5/mapbox.places/${cityName}.json?types=place&country=IN&access_token=${mapboxgl.accessToken}`)
-                .then(response => response.json())
-                .then(data => {
-                    const lng = data.features[0].center[0]; // Get the longitude of the selected city
-                    // console.log(lng);
-                    const lat = data.features[0].center[1]; // Get the latitude of the selected city
-                    // console.log(lat);
-                    map.setCenter([lng,lat]); // Center the map on the selected city
-                    map.setZoom(8); // Zoom in to level 6
-
-                    cities.forEach(city => city.classList.remove('selected')); // Remove 'selected' class from all cities
-                    city.classList.add('selected'); // Add 'selected' class to the clicked city
-                });
-        });
-            // city.addEventListener('dblclick', () => {
-                //     map.setZoom(8)
-                // })
-    });
 });
 
-searchButton.addEventListener('click', () => {
+function createCityElement(cityName) {
+    const cityDiv = document.createElement('div');
+    cityDiv.innerHTML = cityName;
+    cityDiv.classList.add('new-city');
+    citiesContainer.appendChild(cityDiv);
+    return cityDiv;
+}
+  
+// Define a function named addCityEventListener that adds a click event listener to the provided cityDiv element
+function addCityEventListener(cityDiv) {
+    cityDiv.addEventListener('click', () => {
+        const cityName = cityDiv.innerHTML; // Get the name of the city from the innerHTML of the cityDiv element
+        // Fetch geocoding data for the selected city using the Mapbox Geocoding API
+        fetch(`https://api.mapbox.com/geocoding/v5/mapbox.places/${cityName}.json?types=place&country=IN&access_token=${mapboxgl.accessToken}`)
+            .then(response => response.json()) // Retrieve the response data in JSON format
+            .then(data => {
+                const lng = data.features[0].center[0]; // Get the longitude of the selected city from the API response
+                const lat = data.features[0].center[1]; // Get the latitude of the selected city from the API response
+                map.setCenter([lng, lat]); // Center the map on the selected city
+                map.setZoom(8); // Set the zoom level of the map to 8
+                
+                // Remove the 'selected' class from all city elements in the citiesContainer
+                citiesContainer.querySelectorAll('.new-city').forEach(city => {
+                    city.classList.remove('selected');
+                });
+                
+                cityDiv.classList.add('selected'); // Add the 'selected' class to the clicked cityDiv element
+            });
+    });
+}
+
+
+function searchMap() {
     // Center the map on the selected city
     const cityName = searchText.innerHTML; // Get the name of the selected city
     fetch(`https://api.mapbox.com/geocoding/v5/mapbox.places/${cityName}.json?types=place&country=IN&access_token=${mapboxgl.accessToken}`)
@@ -71,9 +76,45 @@ searchButton.addEventListener('click', () => {
             const lat = data.features[0].center[1]; // Get the latitude of the selected city
             // console.log(lat);
             map.setCenter([lng,lat]); // Center the map on the selected city
-            map.setZoom(8); // Zoom in to level 6
-        });
-});
+            map.setZoom(8); // Zoom in to level 8
+
+            const place = data.features[0]; // Get the first place result from the geocoding data
+            const cityDiv = createCityElement(cityName) // Create a new div element for the city
+            addCityEventListener(cityDiv)
+        })
+};
+
+// Add an event listener to the searchButton element that triggers the searchMap function when clicked
+searchButton.addEventListener('click', searchMap)
+
+// Add an event listener to the searchText element that clears the default text when clicked
+searchText.addEventListener('click', () => {
+  // Check if the innerHTML of searchText is equal to the default text "Enter city name here"
+  if (searchText.innerHTML == 'Enter city name here') {
+    searchText.innerHTML = '';
+  }
+})
+
+// Add an event listener to the searchText element that triggers the searchMap function when the Enter key is pressed
+searchText.addEventListener('keydown', (event) => {
+  // Check if the key pressed is the Enter key
+  if (event.key === 'Enter') {
+    event.preventDefault(); // Prevent the default behavior of the Enter key
+    searchMap(); // Call the searchMap function
+  }
+})
+
+
+// const cities = document.querySelectorAll('.new-city');
+// cities.forEach(city => {
+//     city.addEventListener('click', () => {
+//         cities.forEach(city => city.classList.remove('selected'))
+//         city.classList.add('selected')
+//     })
+// })
+
+
+
 // const googleApiKey = 'AIzaSyA_aIEJC_YCrlSlJodYKap6uVcmG6ng-Tk'; // Replace 'YOUR_API_KEY' with your actual API key
 
 // async function getCityDetails(cityName) {
