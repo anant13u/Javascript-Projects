@@ -1,39 +1,77 @@
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
 .map-container {
-    /* border: 2px solid salmon; */
+    margin: 0 5em;
+    border: 2px solid salmon;
+    padding: 2em 0 0;
     display: flex;
     justify-content: center;
-    /* gap: 1em; */
+    gap: 1em;
 }
 
     #map {
         margin: 1em;
-        /* border: 2px solid gold; */
+        border: 2px solid gold;
         /* border-radius: 3em; */
         width: 100em;
         height: 50em;
     }
 
     .cities-container {
-        margin: 1em;
-        /* border: 2px solid gold; */
+        /* margin: 1em; */
+        border: 2px solid gold;
         display: flex;
         flex-direction: column;
+        justify-content: flex-start;
+        /* gap: 0; */
     }
 
         .new-city {
-            margin: 1em 1em 0;
+            margin: 0.6em 0;
             border: 1px solid salmon;
             border-radius: 0.3em;
             padding: 0.7em 1em;
             font-weight: bold;
             cursor: pointer;
             text-align: center;
+            background: linear-gradient(to top right, #e46233, rgb(252, 142, 129));
+            color: white;
+            font-family: 'Nunito', sans-serif;
         }
 
         .selected {
+            border: none;
             background-color: salmon;
+            background: linear-gradient(to right, #6DE195 , #C4E759 100%);
             color: white;
         }
+
+    .details-container {
+        /* margin: 0 2em; */
+        border: 2px solid gold;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        /* gap: 5em; */
+        /* width: 13em; */
+    }
+
+        .detail {
+            margin: 1em;
+            border: 1px solid salmon;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: black;
+            color: white;
+        }
+
+            .detail p {
+                /* margin: 1em 0 0; */
+            }
 
 .search-container {
     /* border: 2px solid salmon; */
@@ -58,9 +96,10 @@
         border: none;
         border-radius: 0.8em;
         padding: 0.7em 1.3em;
-        background-color: salmon;
+        /* background-color: salmon; */
+        background-image: linear-gradient(to top right, red 25%, rgb(211, 46, 28) 75%);
         color: white;
         font-weight: bold;
         font-size: 1rem;
+        cursor: pointer;
     }
-  
