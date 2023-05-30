@@ -1,8 +1,15 @@
 mapboxgl.accessToken = 'pk.eyJ1IjoiYW5hbnQxM3UiLCJhIjoiY2xpMXJoZ2RvMDcyNjNkcGd5bnUwaG04aiJ9.l6C9K2TmrHuGYlHoE_-ZGA';
 const citiesContainer = document.getElementById('cities-container')
-const cityDetailsButton = document.getElementById('get-city-details')
 const searchText = document.getElementById('search-text')
 const searchButton = document.getElementById('search-button')
+
+const detailsContainer = document.querySelector('.details-container')
+const longitudeOutput = document.getElementById('longitude-output')
+const latitudeOutput = document.getElementById('latitude-output')
+const countryOutput = document.getElementById('country-output')
+const languageOutput = document.getElementById('language-output')
+detailsContainer.style.visibility ='hidden'
+
 
 // Creating a new map instance
 const map = new mapboxgl.Map({
@@ -38,6 +45,12 @@ function createCityElement(cityName) {
     cityDiv.innerHTML = cityName;
     cityDiv.classList.add('new-city');
     citiesContainer.appendChild(cityDiv);
+
+    if (citiesContainer.children.length > 9) {
+        // Remove the first city div if the container already has 9 or more city divs
+        citiesContainer.removeChild(citiesContainer.firstChild);
+      }
+
     return cityDiv;
 }
   
@@ -53,21 +66,28 @@ function addCityEventListener(cityDiv) {
                 const lat = data.features[0].center[1]; // Get the latitude of the selected city from the API response
                 map.setCenter([lng, lat]); // Center the map on the selected city
                 map.setZoom(8); // Set the zoom level of the map to 8
+
+                longitudeOutput.innerHTML=lng
+                latitudeOutput.innerHTML=lat
+                countryOutput.innerHTML=''
+                languageOutput.innerHTML=''
                 
                 // Remove the 'selected' class from all city elements in the citiesContainer
                 citiesContainer.querySelectorAll('.new-city').forEach(city => {
                     city.classList.remove('selected');
                 });
-                
                 cityDiv.classList.add('selected'); // Add the 'selected' class to the clicked cityDiv element
+                
+                // detailsContainer.style.display = 'block';
+                detailsContainer.style.visibility ='visible'
             });
     });
+    // longitudeOutput.innerHTML=lng
 }
-
 
 function searchMap() {
     // Center the map on the selected city
-    const cityName = searchText.innerHTML; // Get the name of the selected city
+    const cityName = searchText.innerHTML[0].toUpperCase() + searchText.innerHTML.slice(1); // Get the name of the selected city
     fetch(`https://api.mapbox.com/geocoding/v5/mapbox.places/${cityName}.json?types=place&country=IN&access_token=${mapboxgl.accessToken}`)
         .then(response => response.json())
         .then(data => {
