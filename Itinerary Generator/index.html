@@ -7,12 +7,32 @@
     <title>Itinerary Generator</title>
     <link href="https://api.mapbox.com/mapbox-gl-js/v2.5.1/mapbox-gl.css" rel="stylesheet" />
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
 </head>
 <body>
 
     <div class="map-container">
         <div id="map"></div>
         <div id="cities-container" class="cities-container"></div>
+        <div class="details-container">
+            <div class="detail">
+                <p>Longitude</p>
+                <p id="longitude-output">Longitude Demo</p>
+            </div>
+            <div class="detail">
+                <p>Latitude</p>
+                <p id="latitude-output">Latitude Demo</p>
+            </div>
+            <div class="detail">
+                <p>Country</p>
+                <p id="country-output">Country Demo</p>
+            </div>
+            <div class="detail">
+                <p>Languages spoken</p>
+                <p id="language-output">Language Demo</p>
+            </div>
+        </div>
     </div>
     <div class="search-container">
         <p id="search-text" contenteditable="true">Enter city name here</p>
