@@ -6,7 +6,7 @@ const searchButton = document.getElementById('search-button')
 const detailsContainer = document.querySelector('.details-container')
 const longitudeOutput = document.getElementById('longitude-output')
 const latitudeOutput = document.getElementById('latitude-output')
-const countryOutput = document.getElementById('country-output')
+const locationOutput = document.getElementById('location-output')
 const languageOutput = document.getElementById('language-output')
 detailsContainer.style.visibility ='hidden'
 
@@ -49,7 +49,7 @@ function createCityElement(cityName) {
     if (citiesContainer.children.length > 9) {
         // Remove the first city div if the container already has 9 or more city divs
         citiesContainer.removeChild(citiesContainer.firstChild);
-      }
+    }
 
     return cityDiv;
 }
@@ -58,6 +58,8 @@ function createCityElement(cityName) {
 function addCityEventListener(cityDiv) {
     cityDiv.addEventListener('click', () => {
         const cityName = cityDiv.innerHTML; // Get the name of the city from the innerHTML of the cityDiv element
+        // Check if the cityDiv already has the 'selected' class in below line
+        const isSelected = cityDiv.classList.contains('selected');
         // Fetch geocoding data for the selected city using the Mapbox Geocoding API
         fetch(`https://api.mapbox.com/geocoding/v5/mapbox.places/${cityName}.json?types=place&country=IN&access_token=${mapboxgl.accessToken}`)
             .then(response => response.json()) // Retrieve the response data in JSON format
@@ -65,11 +67,18 @@ function addCityEventListener(cityDiv) {
                 const lng = data.features[0].center[0]; // Get the longitude of the selected city from the API response
                 const lat = data.features[0].center[1]; // Get the latitude of the selected city from the API response
                 map.setCenter([lng, lat]); // Center the map on the selected city
-                map.setZoom(8); // Set the zoom level of the map to 8
+                // map.setZoom(8); // Set the zoom level of the map to 8
+
+                // Set the zoom level based on whether the city is already selected or not
+                if (isSelected) {
+                    map.setZoom(10); // Set the zoom level to 10 if city is already selected
+                } else {
+                    map.setZoom(8); // Set the zoom level to 8 for the first click on the city
+                }
 
                 longitudeOutput.innerHTML=lng
                 latitudeOutput.innerHTML=lat
-                countryOutput.innerHTML=''
+                locationOutput.innerHTML=data.features[0].place_name
                 languageOutput.innerHTML=''
                 
                 // Remove the 'selected' class from all city elements in the citiesContainer
