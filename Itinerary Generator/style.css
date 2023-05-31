@@ -3,25 +3,23 @@ body {
 }
 
 .map-container {
-    margin: 0 5em;
-    border: 2px solid salmon;
-    padding: 2em 0 0;
+    margin: 3em 0 1em;
+    /* border: 2px solid salmon; */
+    /* padding: 2em 0 0; */
     display: flex;
     justify-content: center;
-    gap: 1em;
+    gap: 3em;
 }
 
     #map {
-        margin: 1em;
-        border: 2px solid gold;
+        /* border: 2px solid gold; */
         /* border-radius: 3em; */
         width: 100em;
         height: 50em;
     }
 
     .cities-container {
-        /* margin: 1em; */
-        border: 2px solid gold;
+        /* border: 2px solid gold; */
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
@@ -29,10 +27,10 @@ body {
     }
 
         .new-city {
-            margin: 0.6em 0;
-            border: 1px solid salmon;
-            border-radius: 0.3em;
-            padding: 0.7em 1em;
+            margin: 0.7em 0;
+            /* border: 1px solid salmon; */
+            border-radius: 0.75em;
+            padding: 0.59em 1em;
             font-weight: bold;
             cursor: pointer;
             text-align: center;
@@ -50,7 +48,7 @@ body {
 
     .details-container {
         /* margin: 0 2em; */
-        border: 2px solid gold;
+        /* border: 2px solid gold; */
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
@@ -60,17 +58,18 @@ body {
 
         .detail {
             margin: 1em;
-            border: 1px solid salmon;
+            /* border: 1px solid salmon; */
             display: flex;
             flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            background-color: black;
-            color: white;
+            /* justify-content: center; */
+            /* align-items: center; */
+            text-align: center;
+            /* background-color: black; */
+            /* color: white; */
         }
 
             .detail p {
-                /* margin: 1em 0 0; */
+                margin: 1em 0 0;
             }
 
 .search-container {
@@ -97,7 +96,7 @@ body {
         border-radius: 0.8em;
         padding: 0.7em 1.3em;
         /* background-color: salmon; */
-        background-image: linear-gradient(to top right, red 25%, rgb(211, 46, 28) 75%);
+        background-image: linear-gradient(to top right, rgb(231, 92, 115, 1) 35%, rgb(248, 94, 77, 0.8) 55%);
         color: white;
         font-weight: bold;
         font-size: 1rem;
