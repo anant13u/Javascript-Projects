@@ -49,23 +49,27 @@ body {
     .details-container {
         /* margin: 0 2em; */
         /* border: 2px solid gold; */
+        border-radius: 1em;
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
         /* gap: 5em; */
         /* width: 13em; */
+        background: linear-gradient(to top right, #6DE195 25% , #C4E759 65%);
+        /* background: linear-gradient(to top right, #e46233, rgb(252, 142, 129)); */
+        /* background-color: black; */
+        color: white;
+        font-weight: bold;
     }
 
         .detail {
-            margin: 1em;
+            margin: 1em 3em;
             /* border: 1px solid salmon; */
             display: flex;
             flex-direction: column;
             /* justify-content: center; */
             /* align-items: center; */
             text-align: center;
-            /* background-color: black; */
-            /* color: white; */
         }
 
             .detail p {
