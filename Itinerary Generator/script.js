@@ -69,11 +69,16 @@ function addCityEventListener(cityDiv) {
                 map.setCenter([lng, lat]); // Center the map on the selected city
                 // map.setZoom(8); // Set the zoom level of the map to 8
 
+                // Get the current zoom level of the map
+                const currentZoom = map.getZoom();
+
                 // Set the zoom level based on whether the city is already selected or not
-                if (isSelected) {
-                    map.setZoom(10); // Set the zoom level to 10 if city is already selected
-                } else {
-                    map.setZoom(8); // Set the zoom level to 8 for the first click on the city
+                if (!isSelected) {
+                    map.setZoom(8); // Set the zoom level to 10 if city is already selected
+                } else if (isSelected & currentZoom==8) {
+                    map.setZoom(9); // Set the zoom level to 8 for the first click on the city
+                } else if (isSelected & currentZoom==9) {
+                    map.setZoom(10); // Set the zoom level to 8 for the first click on the city
                 }
 
                 longitudeOutput.innerHTML=lng
