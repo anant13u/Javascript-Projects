@@ -23,7 +23,6 @@ uploadButton.addEventListener('change', function(event) {
       // Create a new container for the image and download link
       const container = document.createElement('div');
       container.classList.add('image-download-container');
-      // container.style.display='flex'
       
       // Create a new image element
       const image = document.createElement('img');
@@ -32,6 +31,9 @@ uploadButton.addEventListener('change', function(event) {
       image.src = URL.createObjectURL(file);
       // Add the image to the container
       container.appendChild(image);
+      const imageText = document.createElement('p')
+      imageText.innerHTML= `Uploaded on ${new Date().toLocaleString()}`
+      container.appendChild(imageText)
 
       // Create a download link for the image
       const downloadLink = document.createElement('a');
