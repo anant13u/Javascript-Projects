@@ -79,6 +79,10 @@ function addCityEventListener(cityDiv) {
                     map.setZoom(9); // Set the zoom level to 8 for the first click on the city
                 } else if (isSelected & currentZoom==9) {
                     map.setZoom(10); // Set the zoom level to 8 for the first click on the city
+                } else if (isSelected & currentZoom==10) {
+                    map.setZoom(11); // Set the zoom level to 8 for the first click on the city
+                } else if (isSelected & currentZoom==11) {
+                    map.setZoom(8); // Set the zoom level to 8 for the first click on the city
                 }
 
                 longitudeOutput.innerHTML=lng
