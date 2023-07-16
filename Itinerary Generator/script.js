@@ -82,6 +82,8 @@ function addCityEventListener(cityDiv) {
                 } else if (isSelected & currentZoom==10) {
                     map.setZoom(11); // Set the zoom level to 8 for the first click on the city
                 } else if (isSelected & currentZoom==11) {
+                    map.setZoom(12); // Set the zoom level to 8 for the first click on the city
+                } else if (isSelected & currentZoom==12) {
                     map.setZoom(8); // Set the zoom level to 8 for the first click on the city
                 }
 
