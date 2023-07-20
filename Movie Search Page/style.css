@@ -133,7 +133,7 @@ body {
                 }
 
     .actor-poster-container {
-        border: 2px solid greenyellow;
+        /* border: 2px solid greenyellow; */
         display: flex;
         justify-content: flex-start;
         gap: 3em;
@@ -142,7 +142,7 @@ body {
     }
 
         .tmdb-actor-poster {
-            border: 2px solid salmon;
+            /* border: 2px solid salmon; */
             border-radius: 10px;
             height: 15em;
         }
