@@ -1,0 +1,23 @@
+body {
+    background-color: black;
+    color: white;
+}
+
+    .top-bar {
+        border: 2px solid greenyellow;
+        display: flex;
+        justify-content: space-between;
+    }
+
+        .search-container {
+            border: 1px solid gray;
+            display: flex;
+        }
+
+            #search-box {
+                border: 2px solid salmon;
+            }
+
+            #search-button {
+                border: 2px solid salmon;
+            }
