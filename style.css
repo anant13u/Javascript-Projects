@@ -6,16 +6,15 @@ body {
     /* border: 2px solid gold; */
     display: flex;
     justify-content: center;
-    align-items: flex-start;
+    /* align-items: flex-start; */
     /* background-color: gold; */
     /* background-color: #093145; */
-    height: 60em;
-
+    /* height: 50em; */
 }
 
     .link-container {
         margin: 5em 0;
-        /* border: 2px solid salmon; */
+        border: 2px solid salmon;
         border-radius: 3em;
         /* padding: 0 5em; */
         display: flex;
@@ -23,7 +22,7 @@ body {
         align-items: center;
         justify-content: center;
         gap: 2em;
-        min-height: 50em;
+        height: 55em;
         /* width: 50em; */
         min-width: 42em;
         /* background-color: rgb(168, 161, 161); */
