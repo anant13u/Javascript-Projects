@@ -1,4 +1,5 @@
 const searchBox = document.getElementById('search-box') 
+const videosContainer = document.querySelector('.videos-container')
 const movieTrailer1 = document.getElementById('trailer1')
 const movieTrailer2 = document.getElementById('trailer2')
 
