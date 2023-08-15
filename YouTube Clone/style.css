@@ -13,22 +13,29 @@ body {
         .search-container {
             /* border: 2px solid salmon; */
             display: flex;
+            font-family: 'Roboto', sans-serif;
             /* gap: 1em; */
             /* opacity: 8%; */
         }
 
-            #search-box {
+            #search-box, #results-count {
                 border: 1px solid rgba(128, 128, 128, 0.336);
+                background-color: #121212;
+                display: flex;
+                color: gray;
+            }
+        
+            #search-box {
                 /* border: 2px solid salmon; */
                 border-radius: 4em 0 0 4em;
                 padding: 0.59em 1.2em;
                 min-width: 30em;
-                display: flex;
                 /* text-align: start; */
                 align-items: center;
-                font-family: 'Roboto', sans-serif;
-                color: gray;
-                background-color: #121212;
+            }
+
+            #results-count {
+                padding: 0.59em 1em;
             }
 
             .search-button-container {
@@ -49,4 +56,3 @@ body {
     .videos-container {
         border: 2px solid salmon;
     }
-    
