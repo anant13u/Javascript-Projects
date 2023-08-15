@@ -7,6 +7,14 @@ const ytApiKey = 'AIzaSyCTUTvvpzzcodbELs4jfDdSNOybbmOglOU'
 const searchButton = document.querySelector('.search-button-container')
 searchButton.addEventListener('click',fetchVideos)
 
+searchBox.addEventListener('click', clearSearchBox)
+
+function clearSearchBox() {
+    if (searchBox.innerHTML='clearSearchBox') {
+        searchBox.innerHTML=''
+    }
+}
+
 async function fetchVideos() {
     try {
         // Get the user-selected number of search results
