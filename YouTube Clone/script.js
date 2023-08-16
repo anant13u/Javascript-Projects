@@ -10,7 +10,7 @@ searchButton.addEventListener('click',fetchVideos)
 searchBox.addEventListener('click', clearSearchBox)
 
 function clearSearchBox() {
-    if (searchBox.innerHTML='clearSearchBox') {
+    if (searchBox.innerHTML=='Search') {
         searchBox.innerHTML=''
     }
 }
