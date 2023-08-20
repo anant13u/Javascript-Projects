@@ -55,4 +55,6 @@ body {
 
     .videos-container {
         border: 2px solid salmon;
+        display: flex;
+        flex-wrap: wrap;
     }
