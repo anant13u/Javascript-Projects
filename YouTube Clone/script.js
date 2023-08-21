@@ -15,6 +15,14 @@ function clearSearchBox() {
     }
 }
 
+resultsCount.addEventListener('click', clearResultsCounter)
+
+function clearResultsCounter() {
+    if (resultsCount.innerHTML=='Results Count') {
+        resultsCount.innerHTML=''
+    }
+}
+
 async function fetchVideos() {
     try {
         // Get the user-selected number of search results
