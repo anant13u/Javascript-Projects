@@ -20,8 +20,9 @@ body {
 
             #search-box, #results-count {
                 border: 1px solid rgba(128, 128, 128, 0.336);
-                background-color: #121212;
                 display: flex;
+                align-items: center;
+                background-color: #121212;
                 color: gray;
             }
         
@@ -31,11 +32,12 @@ body {
                 padding: 0.59em 1.2em;
                 min-width: 25em;
                 /* text-align: start; */
-                align-items: center;
             }
 
             #results-count {
-                padding: 0.59em 1em;
+                /* padding: 0.59em 1em; */
+                justify-content: center;
+                width: 7.9em;
             }
 
             .search-button-container {
