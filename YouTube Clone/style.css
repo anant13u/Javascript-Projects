@@ -6,12 +6,12 @@ body {
     .top-bar {
         border: 2px solid greenyellow;
         display: flex;
-        justify-content: space-between;
+        justify-content: space-around;
         align-items: center;
     }
 
         .search-container {
-            border: 2px solid salmon;
+            /* border: 2px solid salmon; */
             display: flex;
             font-family: 'Roboto', sans-serif;
             /* gap: 1em; */
@@ -31,6 +31,7 @@ body {
                 border-radius: 4em 0 0 4em;
                 padding: 0.59em 1.2em;
                 min-width: 25em;
+                /* background-color: black; */
                 /* text-align: start; */
             }
 
@@ -44,7 +45,7 @@ body {
                 /* border: 1px solid rgba(128, 128, 128, 0.336); */
                 /* border: 2px solid salmon; */
                 border-radius: 0 4em 4em 0;
-                padding: 0.5em 1em;
+                padding: 0.5em 1.2em 0.5em 0.9em;
                 width: 1.7em;
                 display: flex;
                 justify-content: center;
@@ -52,11 +53,21 @@ body {
                 /* opacity: 80%; */
             }
 
+            .search-button-container:hover {
+                cursor: pointer;
+            }
+
+            .search-button-container:hover #search-button-image {
+                transform: scale(1.13);
+                transition: 0.3s;
+            }
+
+
                 /* #search-button-image { */
                 /* } */
 
     .videos-container {
-        border: 2px solid salmon;
+        /* border: 2px solid salmon; */
         display: flex;
         flex-wrap: wrap;
     }
