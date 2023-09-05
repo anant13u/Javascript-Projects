@@ -28,7 +28,7 @@ function clearResultsCounter() {
 async function fetchVideos() {
     try {
         // Get the user-selected number of search results
-        const maxResults = resultsCount.innerHTML
+        const maxResults = resultsCount.innerText
         if (maxResults>20) {
             alert('Please enter a number less than or equal to 20.')
         } else {
@@ -36,7 +36,7 @@ async function fetchVideos() {
             console.log(maxResults)
     
             // Construct the URL for the API request
-            const searchString = searchBox.innerHTML
+            const searchString = searchBox.innerText
             // console.log(`Trailer Search Input will be ${trailerName}`)
             const apiURL = `https://www.googleapis.com/youtube/v3/search?key=${ytApiKey}&q=${searchString}&part=snippet&type=video&videoDefinition=high&maxResults=${maxResults}`
             // console.log(`searchString is ${searchString}`)
