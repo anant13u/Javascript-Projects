@@ -62,13 +62,11 @@ body {
                 transition: 0.3s;
             }
 
-
-                /* #search-button-image { */
-                /* } */
-
     .videos-container {
-        /* border: 2px solid salmon; */
+        border: 2px solid salmon;
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
+        padding: 2em;
+        gap: 2em;
     }
