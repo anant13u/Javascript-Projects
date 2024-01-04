@@ -62,11 +62,21 @@ body {
                 transition: 0.3s;
             }
 
-    .videos-container {
+
+    .videos-menu-container {
         border: 2px solid salmon;
         display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        padding: 2em;
-        gap: 2em;
     }
+
+        .menu-container {
+            border: 2px solid white;
+        }
+
+        .videos-container {
+            border: 2px solid white;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 2em;
+            gap: 2em;
+        }
