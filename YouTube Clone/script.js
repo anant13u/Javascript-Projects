@@ -2,6 +2,10 @@ const searchBox = document.getElementById('search-box')
 const videosContainer = document.querySelector('.videos-container')
 const resultsCount = document.getElementById('results-count')
 
+const videoTrackingTable = document.getElementById('video-tracking-table')
+videoTrackingTable.style.visibility ='hidden'
+
+
 const ytApiKey = 'AIzaSyCTUTvvpzzcodbELs4jfDdSNOybbmOglOU'
 
 const searchButton = document.querySelector('.search-button-container')
@@ -66,8 +70,29 @@ async function fetchVideos() {
         
                 videosContainer.appendChild(videoElement)
             }
+
+            videoTracker()
         }
     } catch (error) {
         console.log(error);
   }
 }
+
+
+function videoTracker() {
+    const maxResults = resultsCount.innerText
+    const searchString = searchBox.innerText
+    const tableBody = videoTrackingTable.getElementsByTagName('tbody')[0]
+
+    var row = tableBody.insertRow(0);
+    row.classList.add('table-row')
+
+    var cell1 = row.insertCell(0);
+    var cell2 = row.insertCell(1);
+
+    cell1.innerHTML = searchString
+    cell2.innerHTML = maxResults
+
+    videoTrackingTable.style.visibility ='visible'
+}
+
