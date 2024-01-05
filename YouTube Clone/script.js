@@ -1,18 +1,23 @@
+const ytApiKey = 'AIzaSyCTUTvvpzzcodbELs4jfDdSNOybbmOglOU'
+
 const searchBox = document.getElementById('search-box')
 const videosContainer = document.querySelector('.videos-container')
 const resultsCount = document.getElementById('results-count')
 
 const videoTrackingTable = document.getElementById('video-tracking-table')
+const tableBody = videoTrackingTable.getElementsByTagName('tbody')[0]
 videoTrackingTable.style.visibility ='hidden'
-
-
-const ytApiKey = 'AIzaSyCTUTvvpzzcodbELs4jfDdSNOybbmOglOU'
 
 const searchButton = document.querySelector('.search-button-container')
 searchButton.addEventListener('click',fetchVideos)
 
 searchBox.addEventListener('click', clearSearchBox)
 searchBox.addEventListener('focus', clearSearchBox)
+searchBox.addEventListener('keypress', function (event) {
+    if (event.key === 'Enter') {
+      fetchVideos()
+    }
+  });
 
 function clearSearchBox() {
     if (searchBox.innerHTML=='Search') {
@@ -22,6 +27,11 @@ function clearSearchBox() {
 
 resultsCount.addEventListener('click', clearResultsCounter)
 resultsCount.addEventListener('focus', clearResultsCounter)
+resultsCount.addEventListener('keypress', function (event) {
+    if (event.key === 'Enter') {
+      fetchVideos()
+    }
+  });
 
 function clearResultsCounter() {
     if (resultsCount.innerHTML=='Results Count') {
@@ -33,7 +43,10 @@ async function fetchVideos() {
     try {
         // Get the user-selected number of search results
         const maxResults = resultsCount.innerText
-        if (maxResults>20) {
+        if (maxResults=='' || maxResults=='Results Count') {
+            alert('Please enter a results count.')
+        }
+        else if (maxResults>20) {
             alert('Please enter a number less than or equal to 20.')
         } else {
             // const maxResults = parseInt(resultsCount.innerHTML)
@@ -71,7 +84,9 @@ async function fetchVideos() {
                 videosContainer.appendChild(videoElement)
             }
 
-            videoTracker()
+            videoTracker(searchString, maxResults)
+            searchBox.innerHTML=''
+            resultsCount.innerHTML=''
         }
     } catch (error) {
         console.log(error);
@@ -79,10 +94,9 @@ async function fetchVideos() {
 }
 
 
-function videoTracker() {
-    const maxResults = resultsCount.innerText
-    const searchString = searchBox.innerText
-    const tableBody = videoTrackingTable.getElementsByTagName('tbody')[0]
+function videoTracker(searchString, maxResults) {
+    // const maxResults = resultsCount.innerText
+    // const searchString = searchBox.innerText
 
     var row = tableBody.insertRow(0);
     row.classList.add('table-row')
