@@ -63,14 +63,33 @@ body {
             }
 
 
-    .videos-menu-container {
+    .videos-videostable-container {
         border: 2px solid salmon;
         display: flex;
     }
 
-        .menu-container {
+        #video-tracking-table {
             border: 2px solid white;
+            padding: 1em;
+            min-width: 18em;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.5em;
         }
+
+            th {
+                padding: 0.5em;
+            }
+
+            .table-row {
+                border: 2px solid salmon;
+                min-width: 17em;
+                display: flex;
+                /* gap: 4em; */
+                justify-content:space-around;
+                /* align-items: center; */
+            }
 
         .videos-container {
             border: 2px solid white;
