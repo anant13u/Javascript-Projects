@@ -67,7 +67,8 @@ async function fetchVideos() {
             for (let i=0; i<data.items.length;i++) {
                 // Get the video ID and URL for the video thumbnail
                 const videoID = data.items[i].id.videoId;
-                // console.log(`Video ID 1 is ${videoID}`)
+                console.log(`Video ID is ${videoID}`)
+                console.log(data.items[i])
         
                 // const thumbnailUrl = data.items[0].snippet.thumbnails.high.url;
                 // console.log(`Thumbnail URL 1 is ${thumbnailUrl}`);
