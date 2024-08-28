@@ -8,7 +8,7 @@ body {
 
 .parent {
     margin: 1em 0;
-    border: 2px solid gold;
+    /* border: 2px solid gold; */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -18,7 +18,7 @@ body {
 
     .search-container {
         margin: 1em 0 0 25em;
-        border: 2px solid green;
+        /* border: 2px solid green; */
         display: flex;
         /* flex-direction: column; */
         justify-content: center;
