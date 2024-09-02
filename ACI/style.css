@@ -40,15 +40,15 @@ body {
         }
 
     #text-container {
-        /* border: 2px solid greenyellow; */
+        border: 2px solid greenyellow;
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        align-items: center;
     }
 
         .text-body {
             margin: 3em;
-            /* border: 2px solid salmon; */
+            border: 2px solid salmon;
             border-radius: 0.4em;
             padding: 1.2em 2em;
             max-width: 30vw;
