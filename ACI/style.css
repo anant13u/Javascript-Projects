@@ -38,7 +38,7 @@ body {
             /* max-width: 8em; */
         }
 
-    #text-container {
+    #content-container {
         border: 2px solid greenyellow;
         display: flex;
         flex-direction: column;
