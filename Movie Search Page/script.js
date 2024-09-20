@@ -13,7 +13,6 @@ const labels = document.querySelectorAll('.label');
 
 const fetchDetails = document.getElementById('fetch-details-button')
 
-const ytApiKey = 'AIzaSyCTUTvvpzzcodbELs4jfDdSNOybbmOglOU'
 const trailerButton = document.getElementById('get-trailer-button')
 const movieTrailer1 = document.getElementById('trailer1')
 const movieTrailer2 = document.getElementById('trailer2')
