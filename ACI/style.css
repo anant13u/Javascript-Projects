@@ -8,9 +8,7 @@ body {
     flex-direction: column;
     align-items: center;
     gap: 3em;
-    /* background-color: black; */
     /* backdrop-filter: blur(5px); */
-    /* opacity: 0.3; */
 }
 
     #navbar {
