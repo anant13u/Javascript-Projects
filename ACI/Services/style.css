@@ -50,13 +50,13 @@ body {
         width: 50vw;
     }
 
-        .text-container {
+        /* .text-container {
             border: 2px solid red;
             display: flex;
             flex-direction: column;
             align-items: center;
             max-width: 23vw;
-        }
+        } */
 
             .text-header {
                 margin: 0;
