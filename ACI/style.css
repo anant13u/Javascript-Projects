@@ -10,7 +10,6 @@ body {
     flex-direction: column;
     align-items: center;
     gap: 3em;
-    /* backdrop-filter: blur(5px); */
 }
 
     #navbar {
