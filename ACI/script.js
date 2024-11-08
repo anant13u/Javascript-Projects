@@ -1,6 +1,7 @@
-const hamburgerIcon = document.getElementsByClassName('hamburger-icon')
+const hamburgerIcon = document.getElementById('hamburger-icon')
 
-addEventListener
+hamburgerIcon.addEventListener('click', toggleMenu())
+
 function toggleMenu() {
     const navbar = document.getElementById("navbar");
     navbar.classList.toggle("show");
