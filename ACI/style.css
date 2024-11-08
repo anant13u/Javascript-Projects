@@ -51,37 +51,24 @@ body {
         width: 50vw;
     }
 
-        .text-container {
-            border: 2px solid red;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            max-width: 23vw;
+        .text-header {
+            margin: 0;
+            border: 2px solid yellow;
+            /* padding: 2em; */
+            font-size: 2rem;
         }
 
-            .text-header {
-                margin: 0;
-                border: 2px solid yellow;
-                /* padding: 2em; */
-                font-size: 2rem;
-            }
-
-            .text-body {
-                /* margin: 3em; */
-                border: 2px solid salmon;
-                border-radius: 0.4em;
-                /* padding: 1em 2em; */
-                /* max-width: 33vw; */
-                text-align: center;
-                font-size: 1rem;
-                /* background-color: rgba(51, 51, 51, 0.75); */
-                /* color: rgb(54, 43, 43); */
-                /* color: white; */
-            }
-
-        .image-container {
-            border: 2px solid red;
-            max-width: 23vw;
+        .text-body {
+            /* margin: 3em; */
+            border: 2px solid salmon;
+            border-radius: 0.4em;
+            /* padding: 1em 2em; */
+            /* max-width: 33vw; */
+            text-align: center;
+            font-size: 1rem;
+            /* background-color: rgba(51, 51, 51, 0.75); */
+            /* color: rgb(54, 43, 43); */
+            /* color: white; */
         }
 
         img {
